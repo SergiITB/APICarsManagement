@@ -13,7 +13,7 @@ public class ConfiguracioWebApi {
 
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping(" ")
+                registry.addMapping("/apicotxes/**")
                         //.allowedOrigins("http://localhost:9001")
                         .allowedOrigins("*")
                         .allowedMethods("GET", "POST", "PUT", "DELETE")

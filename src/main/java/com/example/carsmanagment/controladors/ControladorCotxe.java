@@ -14,27 +14,27 @@ public class ControladorCotxe {
 
     public ControladorCotxe(ServeisCotxe serveiCotxe){this.serveiCotxe = serveiCotxe;}
 
-    @GetMapping("")
+    @GetMapping("/cotxes")
     public ResponseEntity<Object> listarCotxes(){
         List<Cotxe> res = serveiCotxe.llistarCotxes();
         if (res == null) return ResponseEntity.notFound().build();
         else return ResponseEntity.ok(res);
     }
 
-    @GetMapping("")
+    @GetMapping("/cotxea/{id}")
     public ResponseEntity<Cotxe> consultarCotxe(@PathVariable Long id) {
         Cotxe res = serveiCotxe.consultarCotxe(id);
         if (res == null) return ResponseEntity.notFound().build();
         else return ResponseEntity.ok(res);
     }
 
-    @PostMapping("")
+    @PostMapping("/cotxes")
     public ResponseEntity<Cotxe> crearCotxe(@RequestBody Cotxe nou){
         Cotxe res = serveiCotxe.afegirCotxe(nou);
         return new ResponseEntity<>(res, HttpStatus.CREATED);
     }
 
-    @DeleteMapping("")
+    @DeleteMapping("cotxes/{id}")
     public ResponseEntity<Cotxe> eliminarCotxe(@PathVariable Long id){
         Cotxe res = serveiCotxe.eliminarCotxe(id);
         return new ResponseEntity<>(res, HttpStatus.NO_CONTENT);
