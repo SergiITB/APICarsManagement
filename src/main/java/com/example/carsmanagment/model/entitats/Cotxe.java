@@ -10,7 +10,7 @@ import javax.persistence.Id;
 @Entity
 public class Cotxe {
     @Id
-
+    @GeneratedValue
     private Long Id;
     private String marca;
     private String model;
