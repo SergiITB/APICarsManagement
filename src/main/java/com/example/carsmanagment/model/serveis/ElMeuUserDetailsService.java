@@ -16,4 +16,9 @@ public class ElMeuUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return serveiUsuarisUserDetails.consultarPerUsername(username);
     }
+
+    public UserDetails loadUserById(Long id){
+        return serveiUsuarisUserDetails.consultarPerId(id);
+    }
+
 }

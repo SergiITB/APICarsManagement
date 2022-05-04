@@ -21,6 +21,10 @@ public class ServeiUsuari {
         return repositoriUsuari.findByUsername(username).orElse(null);
     }
 
+    public Usuari consultarPerId(Long id){
+        return repositoriUsuari.findById(id).orElse(null);
+    }
+
     public Usuari crearNouUsuari(Usuari nouUsuari) {
         //falta controlar que els 2 passwords del client coincideixen
         //passar un UsuariCreacioDTO
