@@ -14,7 +14,6 @@ import java.util.List;
 public class ServeiUsuari {
 
     private final RepositoriUsuari repositoriUsuari;
-
     private final PasswordEncoder xifrat;
 
     public Usuari consultarPerUsername(String username) {

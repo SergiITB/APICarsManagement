@@ -11,10 +11,6 @@ import org.springframework.stereotype.Component;
 import java.security.SignatureException;
 import java.util.Date;
 import java.util.stream.Collectors;
-
-//mirar curs Openwebinars
-//https://openwebinars.net/academia/aprende/seguridad-api-rest-spring-boot/7506/
-
 @Log
 @Component
 public class JwtProvider {

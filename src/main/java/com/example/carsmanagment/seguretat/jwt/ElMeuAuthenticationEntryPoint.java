@@ -29,6 +29,6 @@ public class ElMeuAuthenticationEntryPoint extends BasicAuthenticationEntryPoint
 
     @PostConstruct
     public void initRealmname() {
-        setRealmName("videojocs.itb");
+        setRealmName("cotxes.itb");
     }
 }
